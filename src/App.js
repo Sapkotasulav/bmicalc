@@ -15,7 +15,7 @@ function App() {
         <div className="innercontainer">
           <div id="weight">
             {" "}
-            <h4>Weight:</h4>
+            <h4>Your Weight ?</h4>
             <input
               type="text"
               placeholder="Your Weight in KG"
@@ -24,7 +24,7 @@ function App() {
             ></input>
           </div>
           <div id="height">
-            <h4>Height:</h4>
+            <h4>your Height ?</h4>
             <input
               type="text"
               placeholder="Your Height in Inches"
@@ -33,11 +33,7 @@ function App() {
             ></input>
           </div>
           <div id="buttons">
-            <a href="#" class="button type--B">
-              <div class="button__line"></div>
-              <div class="button__line"></div>
-              <span class="button__text">CALCULATE</span>
-            </a>
+            <button type="submit" id="buttonp">Calculate</button>
           </div>
           <div className="result">
             <h4>
