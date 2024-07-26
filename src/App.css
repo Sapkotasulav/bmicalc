@@ -154,3 +154,7 @@ body {
 .title{
    text-align: center; 
 }
+.result{
+  text-align: center;
+  align-items: center;
+}
