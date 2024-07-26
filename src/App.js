@@ -7,10 +7,10 @@ function App() {
       <form>
         <div className="innercontainer">
           <div id="weight">
-            <input type="text" placeholder="Your Weight in KG"></input>
+            <input type="text" placeholder="Your Weight in KG" value={weight}></input>
           </div>
           <div id="height">
-            <input type="text" placeholder="Your Height in Inches"></input>
+            <input type="text" placeholder="Your Height in Inches" value={height}></input>
           </div>
           <div id="buttons">
             <a href="#" class="button type--B">
