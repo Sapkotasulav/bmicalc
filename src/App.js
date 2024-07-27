@@ -9,7 +9,7 @@ function App() {
   
 
   return (
-    <div className="maincontainer">
+    <div className="maincontainer"> /* main form */ 
       <Hello />
       <form>
         <div className="innercontainer">
@@ -24,7 +24,7 @@ function App() {
             ></input>
           </div>
           <div id="height">
-            <h4>your Height ?</h4>
+            <h4>Your Height ?</h4>
             <input
               type="text"
               placeholder="Your Height in Inches"
