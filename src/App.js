@@ -9,8 +9,8 @@ function App() {
   
 
   return (
-    <div className="maincontainer"> /* main form */ 
-      <Hello />
+    <div className="maincontainer">  
+      <Hello  />
       <form>
         <div className="innercontainer">
           <div id="weight">
