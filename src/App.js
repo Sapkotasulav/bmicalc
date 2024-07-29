@@ -1,44 +1,71 @@
 import Hello from "./components/Hello";
 import "./App.css";
 import { useState } from "react";
+
 function App() {
-  const [weight, setweight] = useState();
-  const [height, setheight] = useState();
+  const [weight, setWeight] = useState(0);
+  const [height, setHeight] = useState(0);
   const [BMI, setBMI] = useState("......");
-  const [message, setmessage] = useState("");
-  
+  const [message, setMessage] = useState("");
+
+
+
+  const calculateBMI = (event) => {
+    event.preventDefault();
+    const weightNum = parseFloat(weight);
+    const heightNum = parseFloat(height) / 39.37; // Convert inches to meters
+
+    if (!isNaN(weightNum) && !isNaN(heightNum) && heightNum > 0) {
+      const bmi = weightNum / (heightNum * heightNum);
+      setBMI(bmi.toFixed(2)); // Set BMI to 2 decimal places
+      if (bmi > 30) {
+        setMessage("You are obese");
+      } else if (bmi > 25) {
+        setMessage("You are overweight");
+      } else if (bmi > 18.5) {
+        setMessage("You are normal weight");
+      } else {
+        setMessage("You are underweight");
+      }
+    } else {
+      setMessage("Please enter valid values");
+      setBMI("......");
+    }
+  };
 
   return (
-    <div className="maincontainer">  
-      <Hello  />
-      <form>
+    <div className="maincontainer">
+      <Hello title="BMI Calculator" />
+      <form onSubmit={calculateBMI}>
         <div className="innercontainer">
           <div id="weight">
-            {" "}
-            <h4>Your Weight ?</h4>
+            <h4>Your Weight?</h4>
             <input
               type="text"
               placeholder="Your Weight in KG"
               value={weight}
-              onChange={(e) => setweight(e.target.value)}
-            ></input>
+              onChange={(e) => setWeight(e.target.value)}
+            />
           </div>
           <div id="height">
-            <h4>Your Height ?</h4>
+            <h4>Your Height?</h4>
             <input
               type="text"
               placeholder="Your Height in Inches"
               value={height}
-              onChange={(e) => setheight(e.target.value)}
-            ></input>
+              onChange={(e) => setHeight(e.target.value)}
+            />
           </div>
+          
           <div id="buttons">
-            <button type="submit" id="buttonp">Calculate</button>
-          </div>
+            <button type="submit" id="btn1">Calculate</button>
+          
+            <button type="submit" id="btn2">Reset</button>
+          </div> 
           <div className="result">
             <h4>
               Your BMI is: {BMI}
-              <p>{message} </p>
+              <p>{message}</p>
             </h4>
           </div>
         </div>

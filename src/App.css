@@ -39,7 +39,12 @@ body {
   #buttons {
     display: flex;
     justify-content: center;
+    flex-direction: row;
+    flex: 1;
   }
+#btn1{
+  margin-right: 30px;
+}
   
   button {
     padding: 10px 20px;
