@@ -85,3 +85,8 @@ body {
   box-shadow:4px 3px;
   font-size: 17px;
 }
+.page{
+  display: flex;
+  flex-direction: row;
+  gap: 15px;  
+}

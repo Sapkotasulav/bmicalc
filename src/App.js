@@ -8,7 +8,11 @@ function App() {
   const [BMI, setBMI] = useState("......");
   const [message, setMessage] = useState("");
 
-
+const reset=()=>{
+setBMI(0)
+setHeight(0);
+setWeight(0);
+}
 
   const calculateBMI = (event) => {
     event.preventDefault();
@@ -34,6 +38,7 @@ function App() {
   };
 
   return (
+    <div className="page">
     <div className="maincontainer">
       <Hello title="BMI Calculator" />
       <form onSubmit={calculateBMI}>
@@ -60,7 +65,7 @@ function App() {
           <div id="buttons">
             <button type="submit" id="btn1">Calculate</button>
           
-            <button type="submit" id="btn2">Reset</button>
+            <button id="btn2" onClick={reset}>Reset</button>
           </div> 
           <div className="result">
             <h4>
@@ -71,6 +76,9 @@ function App() {
         </div>
       </form>
     </div>
+    <div className="maincontainer"></div>
+    </div>
+    
   );
 }
 
