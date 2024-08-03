@@ -76,7 +76,9 @@ setWeight(0);
         </div>
       </form>
     </div>
-    <div className="maincontainer"></div>
+    <div className="maincontainer">
+    <Hello title="Calculator" />
+    </div>
     </div>
     
   );

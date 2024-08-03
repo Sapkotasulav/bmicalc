@@ -66,6 +66,7 @@ body {
 /* hello.css */
 .title{
    text-align: center; 
+   font-style: italic;
 }
 .result{
   text-align: center;
